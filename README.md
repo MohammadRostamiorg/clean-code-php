@@ -7,8 +7,8 @@
      * [از نام های با معنی و قابل تلفظ استفاده کنید](#از-نام-های-با-معنی-و-قابل-تلفظ-استفاده-کنید)
      * [از واژه یکسان برای همان نوع از متغیر استفاده کنید](#از-واژه-یکسان-برای-همان-نوع-از-متغیر-استفاده-کنید)
      * [از اسامی قابل جستجو استفاده کنید (بخش اول)](#از-نام-های-قابل-جستجو-استفاده-کنید-بخش-اول)
-     * [از اسامی قابل جستجو استفاده کنید (بخش دوم)](#use-searchable-names-part-2)
-     * [از اسامی توضیحی استفاده کنید](#use-explanatory-variables)
+     * [از اسامی قابل جستجو استفاده کنید (بخش دوم)](##از-نام-های-قابل-جستجو-استفاده-کنید-بخش-دوم)
+     * [از اسامی توضیحی استفاده کنید](#از-اسامی-توضیحی-استفاده-کنید)
      * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش اول)](#avoid-nesting-too-deeply-and-return-early-part-1)
      * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش دوم)](#avoid-nesting-too-deeply-and-return-early-part-2)
      * [از نقشه ذهنی کشیدن اجتناب کنید](#avoid-mental-mapping)
@@ -114,9 +114,9 @@ $result = $serializer->serialize($data, 448);
 $json = $serializer->serialize($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 ```
 
-### Use searchable names (part 2)
+### از نام های قابل جستجو استفاده کنید (بخش دوم)
 
-**Bad:**
+**بد:**
 
 ```php
 class User
@@ -134,7 +134,7 @@ if ($user->access & 4) {
 $user->access ^= 2;
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 class User
@@ -159,11 +159,11 @@ if ($user->access & User::ACCESS_UPDATE) {
 $user->access ^= User::ACCESS_CREATE;
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#table-of-contents)**
 
-### Use explanatory variables
+### از اسامی توضیحی استفاده کنید
 
-**Bad:**
+**بد:**
 
 ```php
 $address = 'One Infinite Loop, Cupertino 95014';
@@ -172,10 +172,8 @@ preg_match($cityZipCodeRegex, $address, $matches);
 
 saveCityZipCode($matches[1], $matches[2]);
 ```
-
-**Not bad:**
-
-It's better, but we are still heavily dependent on regex.
+بد نیست:**
+این بهتره، اما هنوز به رجکس بستگی داره
 
 ```php
 $address = 'One Infinite Loop, Cupertino 95014';
@@ -186,9 +184,9 @@ preg_match($cityZipCodeRegex, $address, $matches);
 saveCityZipCode($city, $zipCode);
 ```
 
-**Good:**
+**خوب:**
 
-Decrease dependence on regex by naming subpatterns.
+با نام گذاری زیر الگو ها وابستگی به رجکس را کاهش دهید
 
 ```php
 $address = 'One Infinite Loop, Cupertino 95014';
@@ -198,7 +196,7 @@ preg_match($cityZipCodeRegex, $address, $matches);
 saveCityZipCode($matches['city'], $matches['zipCode']);
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#table-of-contents)**
 
 ### Avoid nesting too deeply and return early (part 1)
 
