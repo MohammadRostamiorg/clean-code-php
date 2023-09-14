@@ -60,27 +60,27 @@
 
 با اینکه بیشتر توسعه دهندگان php از نسخه .5 استفاده میکنند اما بیشتر مثال های این مقاله با نسخه های بالاتر از 7.1 کار خواهند کرد
 
-## Variables
+## متغیر ها
 
-### Use meaningful and pronounceable variable names
+### از نام های با معنی و قابل تلفظ استفاده کنید
 
-**Bad:**
+**بد:**
 
 ```php
 $ymdstr = $moment->format('y-m-d');
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 $currentDate = $moment->format('y-m-d');
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#table-of-contents)**
 
-### Use the same vocabulary for the same type of variable
+### از واژه یکسان برای همان نوع از متغیر استفاده کنید
 
-**Bad:**
+**بد:**
 
 ```php
 getUserInfo();
@@ -89,29 +89,26 @@ getUserRecord();
 getUserProfile();
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 getUser();
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#table-of-contents)**
 
-### Use searchable names (part 1)
+### از نام های قابل جستجو استفاده کنید (بخش اول)
 
-We will read more code than we will ever write. It's important that the code we do write is
-readable and searchable. By *not* naming variables that end up being meaningful for
-understanding our program, we hurt our readers.
-Make your names searchable.
+ما بیشتر از آنچه که قراره بخونیم کد مینویسم . این مهمه که کدی مینویسیم قابل خواندن و قابل جستجو باشد . با عدم نام بردن اس متغیر هایی که در اینده برای خوانندگان کد برای درک برنامه معنی دار میشود  به خوانندگان صدمه میزنیم
 
-**Bad:**
+**بد:**
 
 ```php
 // What the heck is 448 for?
 $result = $serializer->serialize($data, 448);
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 $json = $serializer->serialize($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
