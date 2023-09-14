@@ -3,7 +3,7 @@
 ## جدول مطالب
 
   1. [مقدمه](#مقدمه)
-  2. [مغیر ها](#variables)
+  2. [مغیر ها](#متغیر-ها)
      * [از نام های با معنی و قابل تلفظ استفاده کنید](#use-meaningful-and-pronounceable-variable-names)
      * [از واژه یکسان برای همان نوع از متغیر استفاده کنید](#use-the-same-vocabulary-for-the-same-type-of-variable)
      * [از اسامی قابل جستجو استفاده کنید (بخش اول)](#use-searchable-names-part-1)
