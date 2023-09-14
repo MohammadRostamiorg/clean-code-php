@@ -9,10 +9,10 @@
      * [از اسامی قابل جستجو استفاده کنید (بخش اول)](#از-نام-های-قابل-جستجو-استفاده-کنید-بخش-اول)
      * [از اسامی قابل جستجو استفاده کنید (بخش دوم)](##از-نام-های-قابل-جستجو-استفاده-کنید-بخش-دوم)
      * [از اسامی توضیحی استفاده کنید](#از-اسامی-توضیحی-استفاده-کنید)
-     * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش اول)](#avoid-nesting-too-deeply-and-return-early-part-1)
-     * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش دوم)](#avoid-nesting-too-deeply-and-return-early-part-2)
-     * [از نقشه ذهنی کشیدن اجتناب کنید](#avoid-mental-mapping)
-     * [محتوای غیر ضروری اضافه نکنید](#dont-add-unneeded-context)
+     * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش اول)](#از-تو-در-تویی-زیاد-اجتناب-کنید-و-زودتر-برگردید-بخش-اول)
+     * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش دوم)](#از-تو-در-تویی-زیاد-اجتناب-کنید-و-زودتر-برگردید-بخش-دوم)
+     * [از نقشه ذهنی کشیدن اجتناب کنید](#از-نقشه-ذهنی-کشیدن-اجتناب-کنید)
+     * [مطالب غیر ضروری اضافه نکنید](#مطالب-غیر-ضروری-اضافه-نکنید)
   3. [مقایسه](#comparison)
      * [از مقایسه یکسان استفاده کنید](#use-identical-comparison)
      * [اپراتور های ادغام کننده Null](#null-coalescing-operator)
@@ -198,12 +198,10 @@ saveCityZipCode($matches['city'], $matches['zipCode']);
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
-### Avoid nesting too deeply and return early (part 1)
+### از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش اول)
+تعداد زیاد ساختار if-else میتواند کد شما را برای دنبال کردن سخت کند . صریح بهتر از ضمنی است.
 
-Too many if-else statements can make your code hard to follow. Explicit is better
-than implicit.
-
-**Bad:**
+**بد:**
 
 ```php
 function isShopOpen($day): bool
@@ -226,7 +224,7 @@ function isShopOpen($day): bool
 }
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 function isShopOpen(string $day): bool
@@ -241,11 +239,11 @@ function isShopOpen(string $day): bool
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#table-of-contents)**
 
-### Avoid nesting too deeply and return early (part 2)
+### از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش دوم)
 
-**Bad:**
+**بد:**
 
 ```php
 function fibonacci(int $n)
@@ -263,7 +261,7 @@ function fibonacci(int $n)
 }
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 function fibonacci(int $n): int
@@ -280,14 +278,13 @@ function fibonacci(int $n): int
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#table-of-contents)**
 
-### Avoid Mental Mapping
+### از نقشه ذهنی کشیدن اجتناب کنید
+خواننده کدت رو مجبور نکن که معنی متغیر هاتو ترجمه کنه 
+صریح بهتر از ضمنی است
 
-Don’t force the reader of your code to translate what the variable means.
-Explicit is better than implicit.
-
-**Bad:**
+**بد:**
 
 ```php
 $l = ['Austin', 'New York', 'San Francisco'];
@@ -304,7 +301,7 @@ for ($i = 0; $i < count($l); $i++) {
 }
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 $locations = ['Austin', 'New York', 'San Francisco'];
@@ -319,14 +316,13 @@ foreach ($locations as $location) {
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#table-of-contents)**
 
-### Don't add unneeded context
+### مطالب غیر ضروری اضافه نکنید
 
-If your class/object name tells you something, don't repeat that in your
-variable name.
+اگر اسم کلاس/شی شما چیزی به شما میگه دیگه اونو تو متغیر ها تکرار نکنید
 
-**Bad:**
+**بد:**
 
 ```php
 class Car
@@ -341,7 +337,7 @@ class Car
 }
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 class Car
@@ -356,7 +352,7 @@ class Car
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#table-of-contents)**
 
 ## Comparison
 
