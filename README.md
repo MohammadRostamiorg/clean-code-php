@@ -1,6 +1,6 @@
-# Clean Code PHP
+# کلین کد PHP
 
-## حدول محتوا
+## جدول مطالب
 
   1. [مقدمه](#introduction)
   2. [مغیر ها](#variables)
@@ -9,7 +9,7 @@
      * [از اسامی قابل جستجو استفاده کنید (بخش اول)](#use-searchable-names-part-1)
      * [از اسامی قابل جستجو استفاده کنید (بخش دوم)](#use-searchable-names-part-2)
      * [از اسامی توضیحی استفاده کنید](#use-explanatory-variables)
-     * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش اول))](#avoid-nesting-too-deeply-and-return-early-part-1)
+     * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش اول)](#avoid-nesting-too-deeply-and-return-early-part-1)
      * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش دوم)](#avoid-nesting-too-deeply-and-return-early-part-2)
      * [از نقشه ذهنی کشیدن اجتناب کنید](#avoid-mental-mapping)
      * [محتوای غیر ضروری اضافه نکنید](#dont-add-unneeded-context)
