@@ -47,20 +47,18 @@
   8. [خودت رو تکرار نکن (DRY)](#dont-repeat-yourself-dry)
   9. [ترجمه ها](#translations)
 
-## Introduction
+## مقدمه
 
-Software engineering principles, from Robert C. Martin's book
+اصول مهندسی نرم افزار از کتاب رابرت سی مارتین
 [*Clean Code*](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882),
-adapted for PHP. This is not a style guide. It's a guide to producing
-readable, reusable, and refactorable software in PHP.
+برای PHP سازگار شده است . این یک راهنمای سبک نیست! بلکه یک راهنمای تولید نرم افزار های قابل خواندن ، قابل استفاده مجدد و قابل بازسازی (refactorable) در php است.
 
-Not every principle herein has to be strictly followed, and even fewer will be universally
-agreed upon. These are guidelines and nothing more, but they are ones codified over many
-years of collective experience by the authors of *Clean Code*.
+حتما لازم نیست که همه ی اصل های اینجا را رعایت  کنید . اینها صرفا راهنما هستند نه بیشتر و حتی تعداد کمی به صورت عمومی خواهد بود اما اینها اصولی هستند که روی آنها تواق شده و در بسیاری از موارد قانون شده اند .
+سالها تجربه جمعی نویسندگان clean code
 
-Inspired from [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript).
+الهام گرفته شده از  [clean-code-javascript](https://github.com/ryanmcdermott/clean-code-javascript).
 
-Although many developers still use PHP 5, most of the examples in this article only work with PHP 7.1+.
+با اینکه بیشتر توسعه دهندگان php از نسخه .5 استفاده میکنند اما بیشتر مثال های این مقاله با نسخه های بالاتر از 7.1 کار خواهند کرد
 
 ## Variables
 
