@@ -15,7 +15,7 @@
      * [مطالب غیر ضروری اضافه نکنید](#مطالب-غیر-ضروری-اضافه-نکنید)
   3. [مقایسه](#comparison)
      * [از مقایسه یکسان استفاده کنید](#از-مقایسه-یکسان-استفاده-کنید)
-     * [اپراتور های ادغام کننده Null](#اپراتور-های-ادغام-کننده-null)
+     * [عملگر های ادغام کننده Null](#عملگر-های-ادغام-کننده-null)
   4. [توابع](#توابع)
      * [از آرگومان های پیشفرض به جای خط های کوتاه یا شرطی استفاده کنید](#از-آرگومان-های-پیشفرض-به-جای-خط-های-کوتاه-یا-شرطی-استفاده-کنید)
      * [آرگومان های توابع (2 یا کمتر به صورت ایده آل)](#آرگومان-های-توابع-2-یا-کمتر-به-صورت-ایده-آل)
@@ -387,7 +387,7 @@ if ($a !== $b) {
 مقایسه‌ی   ‍‍ `b$ =! $a` درست (True) بر میگردونه
  **[⬆ برگشت به بالا](#جدول-مطالب)**
 
-### اپراتور های ادغام کننده null
+### عملگر های ادغام کننده null
 
 Null coalescing is a new operator [introduced in PHP 7](https://www.php.net/manual/en/migration70.new-features.php). The null coalescing operator `??` has been added as syntactic sugar for the common case of needing to use a ternary in conjunction with `isset()`. It returns its first operand if it exists and is not `null`; otherwise it returns its second operand.
 
