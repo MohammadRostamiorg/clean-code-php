@@ -389,9 +389,11 @@ if ($a !== $b) {
 
 ### عملگر های ادغام کننده null
 
-Null coalescing is a new operator [introduced in PHP 7](https://www.php.net/manual/en/migration70.new-features.php). The null coalescing operator `??` has been added as syntactic sugar for the common case of needing to use a ternary in conjunction with `isset()`. It returns its first operand if it exists and is not `null`; otherwise it returns its second operand.
 
-**Bad:**
+
+ادغام کننده null یه عملگر جدیده که توی [ php 7 معرفی شد ](https://www.php.net/manual/en/migration70.new-features.php) عملگر ادغام کننده null ‍‍`??`  به نحوی برای حالت رایج نیاز به یک استفاده از حالت سه تایی `()isset`  اگه وجود داشته باشه و null نباشه عملوند اول رو برمیگردونه در غیر این صورت عملوند دوم رو بر میگردونه
+
+**بد:**
 
 ```php
 if (isset($_GET['name'])) {
@@ -403,14 +405,14 @@ if (isset($_GET['name'])) {
 }
 ```
 
-**Good:**
+**خوب:**
 ```php
 $name = $_GET['name'] ?? $_POST['name'] ?? 'nobody';
 ```
 
 **[⬆ برگشت به بالا](#جدول-مطالب)**
 
-## Functions
+## توابع
 
 ### Use default arguments instead of short circuiting or conditionals
 
