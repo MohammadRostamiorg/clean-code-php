@@ -7,19 +7,19 @@
      * [از نام های با معنی و قابل تلفظ استفاده کنید](#از-نام-های-با-معنی-و-قابل-تلفظ-استفاده-کنید)
      * [از واژه یکسان برای همان نوع از متغیر استفاده کنید](#از-واژه-یکسان-برای-همان-نوع-از-متغیر-استفاده-کنید)
      * [از اسامی قابل جستجو استفاده کنید (بخش اول)](#از-نام-های-قابل-جستجو-استفاده-کنید-بخش-اول)
-     * [از اسامی قابل جستجو استفاده کنید (بخش دوم)](##از-نام-های-قابل-جستجو-استفاده-کنید-بخش-دوم)
+     * [از اسامی قابل جستجو استفاده کنید (بخش دوم)](#از-نام-های-قابل-جستجو-استفاده-کنید-بخش-دوم)
      * [از اسامی توضیحی استفاده کنید](#از-اسامی-توضیحی-استفاده-کنید)
      * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش اول)](#از-تو-در-تویی-زیاد-اجتناب-کنید-و-زودتر-برگردید-بخش-اول)
      * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش دوم)](#از-تو-در-تویی-زیاد-اجتناب-کنید-و-زودتر-برگردید-بخش-دوم)
      * [از نقشه ذهنی کشیدن اجتناب کنید](#از-نقشه-ذهنی-کشیدن-اجتناب-کنید)
      * [مطالب غیر ضروری اضافه نکنید](#مطالب-غیر-ضروری-اضافه-نکنید)
   3. [مقایسه](#comparison)
-     * [از مقایسه یکسان استفاده کنید](#use-identical-comparison)
-     * [اپراتور های ادغام کننده Null](#null-coalescing-operator)
-  4. [توابع](#functions)
-     * [از آرگومان های پیشفرض به جای خط های کوتاه یا شرطی استفاده کنید](#use-default-arguments-instead-of-short-circuiting-or-conditionals)
-     * [آرگومان های توابع (2 یا کمتر به صورت ایده آل)](#function-arguments-2-or-fewer-ideally)
-     * [اسامی نوابع باید بگویند که چکار میکنند](#function-names-should-say-what-they-do)
+     * [از مقایسه یکسان استفاده کنید](#از-مقایسه-یکسان-استفاده-کنید)
+     * [اپراتور های ادغام کننده Null](#اپراتور-های-ادغام-کننده-null)
+  4. [توابع](#توابع)
+     * [از آرگومان های پیشفرض به جای خط های کوتاه یا شرطی استفاده کنید](#از-آرگومان-های-پیشفرض-به-جای-خط-های-کوتاه-یا-شرطی-استفاده-کنید)
+     * [آرگومان های توابع (2 یا کمتر به صورت ایده آل)](#آرگومان-های-توابع-2-یا-کمتر-به-صورت-ایده-آل)
+     * [نام های نوابع باید بگویند که چکار میکنند](#نام-های-توابع-باید-بگویند-که-چکار-میکنند)
      * [توابع فقط باید یک سطح از انتزاع را داشته باشند](#functions-should-only-be-one-level-of-abstraction)
      * [از فلگ ها (flags) به عنوان پارامتر فانکشن استفاده نکنید ](#dont-use-flags-as-function-parameters)
      * [از اثرات جانبی اجتناب کنید](#avoid-side-effects)
@@ -354,13 +354,11 @@ class Car
 
 **[⬆ برگشت به بالا](#table-of-contents)**
 
-## Comparison
+## مقایسه
 
-### Use [identical comparison](http://php.net/manual/en/language.operators.comparison.php)
-
-**Not good:**
-
-The simple comparison will convert the string into an integer.
+=### از [مقایسه یکسان](http://php.net/manual/en/language.operators.comparison.php) استفاده کنید
+**خوب نیست:**
+مقایسه ساده رشته را به عدد تبدیل میکند
 
 ```php
 $a = '42';
@@ -371,12 +369,12 @@ if ($a != $b) {
 }
 ```
 
-The comparison `$a != $b` returns `FALSE` but in fact it's `TRUE`!
-The string `42` is different than the integer `42`.
 
-**Good:**
+مقایسه‌ی ‍‍ `b$ =! $a` غلط (False) برمیگردونه اما در واقع درسته (True)
+رشته‌ی ‍‍`42` با عدد `42` متفاوت است
 
-The identical comparison will compare type and value.
+**خوب:**
+مقایسه یکسان نوع (type) و مقدار را (value ) را باهم مقایسه میکند
 
 ```php
 $a = '42';
@@ -386,12 +384,10 @@ if ($a !== $b) {
     // The expression is verified
 }
 ```
+مقایسه‌ی   ‍‍ `b$ =! $a` درست (True) بر میگردونه
+ **[⬆ back to top](#table-of-contents)**
 
-The comparison `$a !== $b` returns `TRUE`.
-
-**[⬆ back to top](#table-of-contents)**
-
-### Null coalescing operator
+### اپراتور های ادغام کننده null
 
 Null coalescing is a new operator [introduced in PHP 7](https://www.php.net/manual/en/migration70.new-features.php). The null coalescing operator `??` has been added as syntactic sugar for the common case of needing to use a ternary in conjunction with `isset()`. It returns its first operand if it exists and is not `null`; otherwise it returns its second operand.
 
