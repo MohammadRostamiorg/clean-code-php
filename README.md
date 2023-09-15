@@ -76,7 +76,7 @@ $ymdstr = $moment->format('y-m-d');
 $currentDate = $moment->format('y-m-d');
 ```
 
-**[⬆ برگشت به بالا](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### از واژه یکسان برای همان نوع از متغیر استفاده کنید
 
@@ -95,7 +95,7 @@ getUserProfile();
 getUser();
 ```
 
-**[⬆ برگشت به بالا](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### از نام های قابل جستجو استفاده کنید (بخش اول)
 
@@ -159,7 +159,7 @@ if ($user->access & User::ACCESS_UPDATE) {
 $user->access ^= User::ACCESS_CREATE;
 ```
 
-**[⬆ برگشت به بالا](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### از اسامی توضیحی استفاده کنید
 
@@ -196,7 +196,7 @@ preg_match($cityZipCodeRegex, $address, $matches);
 saveCityZipCode($matches['city'], $matches['zipCode']);
 ```
 
-**[⬆ برگشت به بالا](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش اول)
 تعداد زیاد ساختار if-else میتواند کد شما را برای دنبال کردن سخت کند . صریح بهتر از ضمنی است.
@@ -239,7 +239,7 @@ function isShopOpen(string $day): bool
 }
 ```
 
-**[⬆ برگشت به بالا](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش دوم)
 
@@ -278,7 +278,7 @@ function fibonacci(int $n): int
 }
 ```
 
-**[⬆ برگشت به بالا](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### از نقشه ذهنی کشیدن اجتناب کنید
 خواننده کدت رو مجبور نکن که معنی متغیر هاتو ترجمه کنه 
@@ -316,7 +316,7 @@ foreach ($locations as $location) {
 }
 ```
 
-**[⬆ برگشت به بالا](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### مطالب غیر ضروری اضافه نکنید
 
@@ -352,7 +352,7 @@ class Car
 }
 ```
 
-**[⬆ برگشت به بالا](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ## مقایسه
 
@@ -385,7 +385,7 @@ if ($a !== $b) {
 }
 ```
 مقایسه‌ی   ‍‍ `b$ =! $a` درست (True) بر میگردونه
- **[⬆ back to top](#table-of-contents)**
+ **[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### اپراتور های ادغام کننده null
 
@@ -408,7 +408,7 @@ if (isset($_GET['name'])) {
 $name = $_GET['name'] ?? $_POST['name'] ?? 'nobody';
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ## Functions
 
@@ -448,7 +448,7 @@ function createMicrobrewery(string $breweryName = 'Hipster Brew Co.'): void
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Function arguments (2 or fewer ideally)
 
@@ -544,7 +544,7 @@ class Questionnaire
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Function names should say what they do
 
@@ -584,7 +584,7 @@ $message = new Email(...);
 $message->send();
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Functions should only be one level of abstraction
 
@@ -722,7 +722,7 @@ class BetterPHPAlternative
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Don't use flags as function parameters
 
@@ -757,7 +757,7 @@ function createTempFile(string $name): void
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Avoid Side Effects
 
@@ -813,7 +813,7 @@ var_dump($newName);
 // ['Ryan', 'McDermott'];
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Don't write to global functions
 
@@ -864,7 +864,7 @@ $configuration = new Configuration([
 
 And now you must use instance of `Configuration` in your application.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Don't use a Singleton pattern
 
@@ -925,7 +925,7 @@ $connection = new DBConnection($dsn);
 
 And now you must use instance of `DBConnection` in your application.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Encapsulate conditionals
 
@@ -945,7 +945,7 @@ if ($article->isPublished()) {
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Avoid negative conditionals
 
@@ -975,7 +975,7 @@ if (isDOMNodePresent($node)) {
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Avoid conditionals
 
@@ -1050,7 +1050,7 @@ class Cessna implements Airplane
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Avoid type-checking (part 1)
 
@@ -1081,7 +1081,7 @@ function travelToTexas(Vehicle $vehicle): void
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Avoid type-checking (part 2)
 
@@ -1117,7 +1117,7 @@ function combine(int $val1, int $val2): int
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Remove dead code
 
@@ -1154,7 +1154,7 @@ $request = requestModule($requestUrl);
 inventoryTracker('apples', $request, 'www.inventory-awesome.io');
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 
 ## Objects and Data Structures
@@ -1230,7 +1230,7 @@ $bankAccount->withdraw($shoesPrice);
 $balance = $bankAccount->getBalance();
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Make objects have private/protected members
 
@@ -1283,7 +1283,7 @@ $employee = new Employee('John Doe');
 echo 'Employee name: ' . $employee->getName();
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ## Classes
 
@@ -1386,7 +1386,7 @@ class Employee
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Avoid fluent interfaces
 
@@ -1494,7 +1494,7 @@ $car->setModel('F-150');
 $car->dump();
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Prefer final classes
 
@@ -1559,7 +1559,7 @@ final class Car implements Vehicle
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ## SOLID
 
@@ -1647,7 +1647,7 @@ class UserSettings
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Open/Closed Principle (OCP)
 
@@ -1761,7 +1761,7 @@ class HttpRequester
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Liskov Substitution Principle (LSP)
 
@@ -1890,7 +1890,7 @@ foreach ($shapes as $shape) {
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Interface Segregation Principle (ISP)
 
@@ -1981,7 +1981,7 @@ class RobotEmployee implements Workable
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ### Dependency Inversion Principle (DIP)
 
@@ -2073,7 +2073,7 @@ class Manager
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ## Don’t repeat yourself (DRY)
 
@@ -2157,7 +2157,7 @@ function showList(array $employees): void
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
 
 ## Translations
 
@@ -2191,4 +2191,4 @@ This is also available in other languages:
 * :jp: **Japanese:**
    * [hayato07/clean-code-php](https://github.com/hayato07/clean-code-php)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ برگشت به بالا](#جدول-مطالب)**
