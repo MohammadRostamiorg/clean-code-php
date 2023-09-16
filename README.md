@@ -13,7 +13,7 @@
      * [از تو در تویی زیاد اجتناب کنید و زودتر برگردید (بخش دوم)](#از-تو-در-تویی-زیاد-اجتناب-کنید-و-زودتر-برگردید-بخش-دوم)
      * [از نقشه ذهنی کشیدن اجتناب کنید](#از-نقشه-ذهنی-کشیدن-اجتناب-کنید)
      * [مطالب غیر ضروری اضافه نکنید](#مطالب-غیر-ضروری-اضافه-نکنید)
-  3. [مقایسه](#comparison)
+  3. [مقایسه](#مقایسه)
      * [از مقایسه یکسان استفاده کنید](#از-مقایسه-یکسان-استفاده-کنید)
      * [عملگر های ادغام کننده Null](#عملگر-های-ادغام-کننده-null)
   4. [توابع](#توابع)
@@ -356,7 +356,8 @@ class Car
 
 ## مقایسه
 
-=### از [مقایسه یکسان](http://php.net/manual/en/language.operators.comparison.php) استفاده کنید
+### از [مقایسه یکسان](http://php.net/manual/en/language.operators.comparison.php) استفاده کنید
+
 **خوب نیست:**
 مقایسه ساده رشته را به عدد تبدیل میکند
 
@@ -414,11 +415,11 @@ $name = $_GET['name'] ?? $_POST['name'] ?? 'nobody';
 
 ## توابع
 
-### Use default arguments instead of short circuiting or conditionals
+### از آرگومان های پیشفرض به جای خط های کوتاه یا شرطی استفاده کنید
 
-**Not good:**
+**خوب نیست:**
 
-This is not good because `$breweryName` can be `NULL`.
+این خوب نیست چون ‍‍`breweryName$` میتونه Null باشه 
 
 ```php
 function createMicrobrewery($breweryName = 'Hipster Brew Co.'): void
@@ -427,9 +428,10 @@ function createMicrobrewery($breweryName = 'Hipster Brew Co.'): void
 }
 ```
 
-**Not bad:**
+**بد نیست:**
 
-This opinion is more understandable than the previous version, but it better controls the value of the variable.
+
+این گزینه از قبلی قابل فهم تره اما مقدار متغیر رو بهتر کنترل میکنه
 
 ```php
 function createMicrobrewery($name = null): void
@@ -439,10 +441,9 @@ function createMicrobrewery($name = null): void
 }
 ```
 
-**Good:**
+**خوب:**
 
- You can use [type hinting](https://www.php.net/manual/en/language.types.declarations.php) and be sure that the `$breweryName` will not be `NULL`.
-
+شما میتوانید از [type hinting](https://www.php.net/manual/en/language.types.declarations.php) استفاده کنید و مطمئن بشید که `breweryName$` . نمیتونه NULL بشه
 ```php
 function createMicrobrewery(string $breweryName = 'Hipster Brew Co.'): void
 {
@@ -452,16 +453,17 @@ function createMicrobrewery(string $breweryName = 'Hipster Brew Co.'): void
 
 **[⬆ برگشت به بالا](#جدول-مطالب)**
 
-### Function arguments (2 or fewer ideally)
+### آرگومان های توابع (2 یا کمتر به صورت ایده آل)
 
-Limiting the amount of function parameters is incredibly important because it makes
-testing your function easier. Having more than three leads to a combinatorial explosion
-where you have to test tons of different cases with each separate argument.
+محدود کردن تعداد پارامتر های یک تابع  به طور باور نکردنی ای مهمه چون  تست کردن تابع شمارو آسون تر میکنه داشتن بیشتر از 3 تا پارامتر منجر به یک انفجار ترکیبی میشه که شما توی اون باید توی اون موارد مختلف رو با آرگومان های جداگانه ازمایش کنید
 
 Zero arguments is the ideal case. One or two arguments is ok, and three should be avoided.
 Anything more than that should be consolidated. Usually, if you have more than two
 arguments then your function is trying to do too much. In cases where it's not, most
 of the time a higher-level object will suffice as an argument.
+
+گزینه ایده آل صفر تا آرگومانه ، یک یا دو آرگومان اوکی ان و از سه تار آرگومان باید اجتناب کرد. , و هرچیزی بیشتر از این باید تجمیع شود معمولا اگه شما بیشتر از دوتا آرگومان  توی تابعتون داشته باشید 
+
 
 **Bad:**
 
