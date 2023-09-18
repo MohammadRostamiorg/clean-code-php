@@ -457,15 +457,11 @@ function createMicrobrewery(string $breweryName = 'Hipster Brew Co.'): void
 
 محدود کردن تعداد پارامتر های یک تابع  به طور باور نکردنی ای مهمه چون  تست کردن تابع شمارو آسون تر میکنه داشتن بیشتر از 3 تا پارامتر منجر به یک انفجار ترکیبی میشه که شما توی اون باید توی اون موارد مختلف رو با آرگومان های جداگانه ازمایش کنید
 
-Zero arguments is the ideal case. One or two arguments is ok, and three should be avoided.
-Anything more than that should be consolidated. Usually, if you have more than two
-arguments then your function is trying to do too much. In cases where it's not, most
-of the time a higher-level object will suffice as an argument.
 
-گزینه ایده آل صفر تا آرگومانه ، یک یا دو آرگومان اوکی ان و از سه تار آرگومان باید اجتناب کرد. , و هرچیزی بیشتر از این باید تجمیع شود معمولا اگه شما بیشتر از دوتا آرگومان  توی تابعتون داشته باشید 
+گزینه ایده آل صفر تا آرگومانه ، یک یا دو آرگومان اوکی ان و از سه تار آرگومان باید اجتناب کرد. , و هرچیزی بیشتر از این باید [با یکدیگر] تلفیق شود معمولا اگه شما بیشتر از دوتا آرگومان  توی تابعتون داشته باشید . تابع شما سعی میکنه تا کار های زیادی انجام بده . توی مواردی اینطوری نیس یک شی (object) سطح بالا به عنوان آرگومان کافیه
 
 
-**Bad:**
+**بد:**
 
 ```php
 class Questionnaire
@@ -485,7 +481,7 @@ class Questionnaire
 }
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 class Name
@@ -550,9 +546,9 @@ class Questionnaire
 
 **[⬆ برگشت به بالا](#جدول-مطالب)**
 
-### Function names should say what they do
+### نام های نوابع باید بگویند که چکار میکنند
 
-**Bad:**
+**بد:**
 
 ```php
 class Email
@@ -570,7 +566,7 @@ $message = new Email(...);
 $message->handle();
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 class Email
