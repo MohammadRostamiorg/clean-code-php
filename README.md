@@ -20,7 +20,7 @@
      * [از آرگومان های پیشفرض به جای خط های کوتاه یا شرطی استفاده کنید](#از-آرگومان-های-پیشفرض-به-جای-خط-های-کوتاه-یا-شرطی-استفاده-کنید)
      * [آرگومان های توابع (2 یا کمتر به صورت ایده آل)](#آرگومان-های-توابع-2-یا-کمتر-به-صورت-ایده-آل)
      * [نام های نوابع باید بگویند که چکار میکنند](#نام-های-توابع-باید-بگویند-که-چکار-میکنند)
-     * [توابع فقط باید یک سطح از انتزاع را داشته باشند](#functions-should-only-be-one-level-of-abstraction)
+     * [توابع فقط باید یک سطح از انتزاع را داشته باشند](#توابع-فقط-باید-یک-سطح-از-انتزاع-را-داشته-باشند)
      * [از فلگ ها (flags) به عنوان پارامتر فانکشن استفاده نکنید ](#dont-use-flags-as-function-parameters)
      * [از اثرات جانبی اجتناب کنید](#avoid-side-effects)
      * [توابع گلوبال  (global) را ننویسید](#dont-write-to-global-functions)
@@ -586,13 +586,12 @@ $message->send();
 
 **[⬆ برگشت به بالا](#جدول-مطالب)**
 
-### Functions should only be one level of abstraction
+### توابع فقط باید یک سطح از انتزاع را داشته باشند
+وقتی شما بیشتر از یک سطح از انتزاع دارید تابع شما معمولا  کار زیادی انجام میدهد تقسیم توابع منجر به استفاده مجدد و آسان تر میشود.
 
-When you have more than one level of abstraction your function is usually
-doing too much. Splitting up functions leads to reusability and easier
-testing.
+تست کردن
 
-**Bad:**
+**بد:**
 
 ```php
 function parseBetterPHPAlternative(string $code): void
@@ -620,9 +619,10 @@ function parseBetterPHPAlternative(string $code): void
 }
 ```
 
-**Bad too:**
+** باز هم بد:**
 
 We have carried out some of the functionality, but the `parseBetterPHPAlternative()` function is still very complex and not testable.
+
 
 ```php
 function tokenize(string $code): array
