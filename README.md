@@ -21,7 +21,7 @@
      * [آرگومان های توابع (2 یا کمتر به صورت ایده آل)](#آرگومان-های-توابع-2-یا-کمتر-به-صورت-ایده-آل)
      * [نام های نوابع باید بگویند که چکار میکنند](#نام-های-توابع-باید-بگویند-که-چکار-میکنند)
      * [توابع فقط باید یک سطح از انتزاع را داشته باشند](#توابع-فقط-باید-یک-سطح-از-انتزاع-را-داشته-باشند)
-     * [از فلگ ها (flags) به عنوان پارامتر فانکشن استفاده نکنید ](#dont-use-flags-as-function-parameters)
+     * [از فلگ ها (flags) به عنوان پارامتر فانکشن استفاده نکنید](#از-فلگ-ها-flags-به-عنوان-پارامتر-فانکشن-استفاده-نکنید)
      * [از اثرات جانبی اجتناب کنید](#avoid-side-effects)
      * [توابع گلوبال  (global) را ننویسید](#dont-write-to-global-functions)
      * [از الگوی singelton استفاده نکنید](#dont-use-a-singleton-pattern)
@@ -620,8 +620,7 @@ function parseBetterPHPAlternative(string $code): void
 ```
 
 ** باز هم بد:**
-
-We have carried out some of the functionality, but the `parseBetterPHPAlternative()` function is still very complex and not testable.
+ما بعضی از کار های functionality (ابع محور بودن) را انجام دادمی اما تابع `()parseBetterPHPAlternative` هنوز خیلی پیچیده و غیر قابل تسته.
 
 
 ```php
@@ -662,9 +661,10 @@ function parseBetterPHPAlternative(string $code): void
 }
 ```
 
-**Good:**
+**خوب:**
 
 The best solution is move out the dependencies of `parseBetterPHPAlternative()` function.
+بهترین راه حل بیرون کردن وابستگی ها از تابع `()parseBetterPHPAlternative` است
 
 ```php
 class Tokenizer
@@ -724,7 +724,7 @@ class BetterPHPAlternative
 
 **[⬆ برگشت به بالا](#جدول-مطالب)**
 
-### Don't use flags as function parameters
+### از فلگ ها (flags) به عنوان پارامتر فانکشن استفاده نکنید
 
 Flags tell your user that this function does more than one thing. Functions should
 do one thing. Split out your functions if they are following different code paths
