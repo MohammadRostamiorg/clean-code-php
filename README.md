@@ -726,11 +726,10 @@ class BetterPHPAlternative
 
 ### از فلگ ها (flags) به عنوان پارامتر فانکشن استفاده نکنید
 
-Flags tell your user that this function does more than one thing. Functions should
-do one thing. Split out your functions if they are following different code paths
-based on a boolean.
 
-**Bad:**
+فلگ ها به کاربر شما میگن که این تابع بیشتر از یک چیزه . تابع باید یک کار انجام  بده . اگر توابع شما بر اساس یک بولین (boolean) کارهای متفاوتی میکنند اونارو تقسیم کنید.
+
+**بد:**
 
 ```php
 function createFile(string $name, bool $temp = false): void
@@ -743,7 +742,7 @@ function createFile(string $name, bool $temp = false): void
 }
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 function createFile(string $name): void
@@ -759,7 +758,7 @@ function createTempFile(string $name): void
 
 **[⬆ برگشت به بالا](#جدول-مطالب)**
 
-### Avoid Side Effects
+### از اثرات جانبی اجتناب کنید
 
 A function produces a side effect if it does anything other than take a value in and
 return another value or values. A side effect could be writing to a file, modifying
@@ -775,7 +774,17 @@ any structure, using mutable data types that can be written to by anything, and 
 centralizing where your side effects occur. If you can do this, you will be happier
 than the vast majority of other programmers.
 
-**Bad:**
+
+
+اگر یک تابع کاری غیر از گرفتن مقدار و برگردان یک مقدار یا مقدار های دیگر  انجام دهد یک اثر جانبی ایجاد می کند
+یک اثر جانبی می تواند نوشتن در یک فایل، تغییر دادن یک  متغیر گلوبال، یا به طور تصادفی تمام پول خود را به یک غریبه متصل کنید.
+
+در حال حاضر، شما نیاز به تاثیرات جانبی در یک برنامه در مواردی دارید. مانند مثال قبلی، ممکن است لازم باشد در یک فایل بنویسید. کاری که می خواهید انجام دهید این است که در جایی که این کار را انجام می دهید متمرکز شوید. چندین توابع و کلاس که در یک فایل خاص بنویسند ندارند. یک سرویس داشته باشید که این کار را انجام دهد. یک و تنها یکی.
+
+نکته اصلی اینه که از تله های رایج مثل اشتراک گذاری حالت(state ) ها بین اشیا (objects) بدون هیچ ساختاری با استفاده از تایپ ها مختلف داده که میتواند به وسیله هر چیزی نوشته شود و محل بروز اثرات جانبی شما را متمرکز نمیکند اجتناب کنید
+اگه شما بتونید این کار رو بکنید نسب به اکثر برنامه نویس ها شادتر خواهید بود
+
+**بد:**
 
 ```php
 // Global variable referenced by following function.
@@ -795,7 +804,7 @@ var_dump($name);
 // ['Ryan', 'McDermott'];
 ```
 
-**Good:**
+**خوب:**
 
 ```php
 function splitIntoFirstAndLastName(string $name): array
@@ -815,7 +824,7 @@ var_dump($newName);
 
 **[⬆ برگشت به بالا](#جدول-مطالب)**
 
-### Don't write to global functions
+### توابع گلوبال global را ننویسید
 
 Polluting globals is a bad practice in many languages because you could clash with another
 library and the user of your API would be none-the-wiser until they get an exception in
@@ -823,7 +832,8 @@ production. Let's think about an example: what if you wanted to have configurati
 You could write global function like `config()`, but it could clash with another library
 that tried to do the same thing.
 
-**Bad:**
+آلودگی گلوبال ها در بسیاری از زبان‌ها عمل بدی است، زیرا ممکن است با کتابخانه دیگری برخورد کنید و کاربر API شما عاقل‌تر نخواهد بود تا زمانی که در پروداکشن  استثناء دریافت نکند. بیایید در باره یک مثال فکر کنیم : اگه شما بخواهید ارایه رو پیکربندی کنی چی؟
+**بد:**
 
 ```php
 function config(): array
